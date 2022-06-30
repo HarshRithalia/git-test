@@ -11,12 +11,7 @@ pipeline {
                     sh """ mvn install -f TicketBookingServiceJunitTesting """
             }
         }
-        stage('test') {
-            steps {
-                   sh """ mvn test -f TicketBookingServiceJunitTesting """
-            }
-        }
-        stage('package') {
+           stage('package') {
             steps {
                    sh """ mvn package -f TicketBookingServiceJunitTesting """
             }
