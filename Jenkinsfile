@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
-                    git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git
+                    sh """ git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git """
             }
         }
         stage('install') {
