@@ -8,7 +8,7 @@ pipeline {
         }
         stage('install') {
             steps {
-                    sh """ mvn install -f TicketBookingServiceJunitTesting """
+                    sh """ mvn clean install -f TicketBookingServiceJunitTesting """
             }
         }
            stage('package') {
