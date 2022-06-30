@@ -8,17 +8,17 @@ pipeline {
         }
         stage('install') {
             steps {
-                    mvn install -f TicketBookingServiceJunitTesting
+                    sh """ mvn install -f TicketBookingServiceJunitTesting """
             }
         }
         stage('test') {
             steps {
-                    mvn test -f TicketBookingServiceJunitTesting
+                   sh """ mvn test -f TicketBookingServiceJunitTesting """
             }
         }
         stage('package') {
             steps {
-                    mvn package -f TicketBookingServiceJunitTesting
+                   sh """ mvn package -f TicketBookingServiceJunitTesting """
             }
         }
     }
